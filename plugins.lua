@@ -122,6 +122,10 @@ local plugins = {
       require("symbols-outline").setup()
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
+  },
 }
 
 return plugins

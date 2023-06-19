@@ -156,6 +156,20 @@ M.git = {
     ["<leader>gg"] = {
       "<cmd> LazyGit <CR>",
     },
+    ["<leader>gd"] = {
+      "<cmd> DiffviewOpen <CR>",
+    },
+    ["<leader>gc"] = {
+      "<cmd> DiffviewClose <CR>",
+    },
+    ["<leader>gh"] = {
+      "<cmd> DiffviewFileHistory % <CR>",
+      "DiffviewFileHistory current",
+    },
+    ["<leader>gH"] = {
+      "<cmd> DiffviewFileHistory <CR>",
+      "DiffviewFileHistory all",
+    },
   },
 }
 
