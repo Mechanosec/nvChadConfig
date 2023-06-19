@@ -9,5 +9,6 @@ wk.register {
     N = { name = "+NvChad" },
     f = { name = "+Find" },
     t = { name = "+Terminal" },
+    W = { name = "+Workspace" },
   },
 }

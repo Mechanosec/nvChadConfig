@@ -54,8 +54,11 @@ local plugins = {
     end,
   },
   {
-    "charludo/projectmgr.nvim",
-    lazy = false, -- important!
+    "natecraddock/workspaces.nvim",
+    lazy = false,
+    config = function()
+      require("workspaces").setup()
+    end,
   },
   {
     "svrana/neosolarized.nvim",

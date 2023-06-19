@@ -116,9 +116,12 @@ M.lspconfig = {
   },
 }
 
-M.projects = {
+M.workspace = {
   n = {
-    ["<leader>fp"] = { "<cmd> ProjectMgr<CR>", "Open Projects" },
+    ["<leader>Wa"] = { "<cmd> WorkspacesAdd <CR>", "Add workspace" },
+    ["<leader>Wr"] = { "<cmd> WorkspacesRemove <CR>", "Remove workspace" },
+    ["<leader>Wo"] = { "<cmd> WorkspacesOpen <CR>", "Open workspace" },
+    ["<leader>Wl"] = { "<cmd> WorkspacesList <CR>", "List workspace" },
   },
 }
 
