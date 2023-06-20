@@ -36,8 +36,15 @@ M.general = {
     ["<leader><leader>"] = {
       "<cmd> HopWord <CR>",
     },
+    ["<leader>e"] = {
+      "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
+      "Explorer",
+    },
     ["<leader>w"] = {
-      "<cmd> w <CR>",
+      function()
+        vim.lsp.buf.format { async = false }
+        vim.cmd "w"
+      end,
       "Save buffer",
     },
     ["<leader>q"] = {

@@ -5,11 +5,50 @@ local plugins = {
 
   -- Override plugin definition options
   {
+    "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    lazy = false,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup {
+        extensions = {
+          file_browser = {
+            initial_mode = "normal",
+            hijack_netrw = true,
+            mappings = {
+              ["n"] = {
+                ["o"] = function()
+                  vim.cmd ""
+                end,
+                ["/"] = function()
+                  vim.cmd "startisert"
+                end,
+              },
+            },
+          },
+        },
+      }
+      require("telescope").load_extension "file_browser"
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       -- format & linting
       {
         "jose-elias-alvarez/null-ls.nvim",
+        {
+          "SmiteshP/nvim-navbuddy",
+          dependencies = {
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+          },
+          opts = { lsp = { auto_attach = true } },
+        },
+
         config = function()
           require "custom.configs.null-ls"
         end,
@@ -137,20 +176,7 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  {
-    "neovim/nvim-lspconfig",
-    lazy = false,
-    dependencies = {
-      {
-        "SmiteshP/nvim-navbuddy",
-        dependencies = {
-          "SmiteshP/nvim-navic",
-          "MunifTanjim/nui.nvim",
-        },
-        opts = { lsp = { auto_attach = true } },
-      },
-    },
-  },
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
 }
 
 return plugins
