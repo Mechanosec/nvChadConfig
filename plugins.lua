@@ -4,7 +4,6 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
   -- Override plugin definition options
-
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -118,13 +117,15 @@ local plugins = {
       require "custom.configs.dapui"
     end,
   },
-  {
-    "simrat39/symbols-outline.nvim",
-    lazy = false,
-    config = function()
-      require("symbols-outline").setup()
-    end,
-  },
+  -- {
+  --   "simrat39/symbols-outline.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("symbols-outline").setup {
+  --       auto_close = true,
+  --     }
+  --   end,
+  -- },
   {
     "sindrets/diffview.nvim",
     lazy = false,
@@ -133,9 +134,23 @@ local plugins = {
     "windwp/nvim-ts-autotag",
     lazy = false,
     config = function()
-      require('nvim-ts-autotag').setup()
-    end
-  }
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    lazy = false,
+    dependencies = {
+      {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+          "SmiteshP/nvim-navic",
+          "MunifTanjim/nui.nvim",
+        },
+        opts = { lsp = { auto_attach = true } },
+      },
+    },
+  },
 }
 
 return plugins

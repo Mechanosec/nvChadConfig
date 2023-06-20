@@ -127,7 +127,7 @@ M.workspace = {
 
 M.find = {
   n = {
-    ["<leader>fs"] = { "<cmd> SymbolsOutline <CR>", "SymbolsOutline" },
+    ["<leader>fn"] = { "<cmd> Navbuddy <CR>", "SymbolsOutline" },
   },
 }
 
