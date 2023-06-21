@@ -177,7 +177,6 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
-  { "akinsho/git-conflict.nvim", version = "*", config = true },
 }
 
 return plugins
