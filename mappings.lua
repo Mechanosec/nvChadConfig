@@ -84,7 +84,7 @@ M.lspconfig = {
   n = {
     ["<leader>lD"] = {
       "<cmd> Telescope diagnostics <CR>",
-      "Files diagnostics",
+      "Diagnostics",
     },
     ["<leader>lf"] = {
       function()
