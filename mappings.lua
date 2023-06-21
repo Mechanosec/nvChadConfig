@@ -82,6 +82,10 @@ M.dap = {
 
 M.lspconfig = {
   n = {
+    ["<leader>lD"] = {
+      "<cmd> Telescope diagnostics <CR>",
+      "Files diagnostics",
+    },
     ["<leader>lf"] = {
       function()
         vim.lsp.buf.format { async = true }
@@ -93,12 +97,6 @@ M.lspconfig = {
         vim.lsp.buf.code_action()
       end,
       "Code action",
-    },
-    ["<leader>lD"] = {
-      function()
-        vim.lsp.buf.type_definition()
-      end,
-      "Definition type",
     },
     ["<leader>ls"] = {
       function()
