@@ -6,7 +6,6 @@ local plugins = {
   -- Override plugin definition options
   {
     "nvim-tree/nvim-tree.lua",
-
     enabled = false,
   },
   {
