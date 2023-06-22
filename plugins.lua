@@ -156,15 +156,6 @@ local plugins = {
       require "custom.configs.dapui"
     end,
   },
-  -- {
-  --   "simrat39/symbols-outline.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require("symbols-outline").setup {
-  --       auto_close = true,
-  --     }
-  --   end,
-  -- },
   {
     "sindrets/diffview.nvim",
     lazy = false,
