@@ -10,5 +10,6 @@ wk.register {
     f = { name = "+Find" },
     t = { name = "+Terminal" },
     W = { name = "+Workspace" },
+    d = { name = "+Debug" },
   },
 }
