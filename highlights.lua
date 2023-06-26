@@ -12,6 +12,9 @@ M.override = {
   CursorLine = {
     bg = "line",
   },
+  Visual = {
+    reverse = true,
+  },
 }
 
 ---@type HLTable
