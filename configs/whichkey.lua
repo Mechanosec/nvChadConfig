@@ -11,5 +11,6 @@ wk.register {
     t = { name = "+Terminal" },
     W = { name = "+Workspace" },
     d = { name = "+Debug" },
+    s = { name = "+Split" },
   },
 }

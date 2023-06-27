@@ -56,6 +56,13 @@ M.general = {
   },
 }
 
+M.split = {
+  n = {
+    ["<leader>sh"] = { "<cmd> split <CR>", "Horizontal" },
+    ["<leader>sv"] = { "<cmd> vsplit <CR>", "Vertical" },
+  },
+}
+
 M.nvchad = {
   n = {
     ["<leader>Nh"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
