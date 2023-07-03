@@ -15,10 +15,6 @@ local sources = {
   formatting.stylua,
   -- cpp
   formatting.clang_format,
-  -- prisma
-  formatting.prismaFmt.with {
-    command = { "cat", "/prisma/schema.prisma", "|", "prisma", "format" },
-  },
 
   lint.eslint,
 }
