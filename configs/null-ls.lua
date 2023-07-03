@@ -8,11 +8,17 @@ local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
 local sources = {
-  formatting.prettier.with { filetypes = { "html", "markdown", "css", "javascript", "typescript" } }, -- so prettier works only on these filetypes
+  formatting.prettier.with {
+    filetypes = { "html", "markdown", "css", "javascript", "typescript", "typescriptreact" },
+  }, -- so prettier works only on these filetypes
   -- Lua
   formatting.stylua,
   -- cpp
   formatting.clang_format,
+  -- prisma
+  formatting.prismaFmt.with {
+    command = { "cat", "/prisma/schema.prisma", "|", "prisma", "format" },
+  },
 
   lint.eslint,
 }
