@@ -10,10 +10,13 @@ M.override = {
     italic = true,
   },
   CursorLine = {
-    bg = "line",
+    bg = "grey",
   },
   Visual = {
     reverse = true,
+  },
+  TelescopeSelection = {
+    bg = "grey",
   },
 }
 
