@@ -9,6 +9,14 @@ local plugins = {
     enabled = false,
   },
   {
+    "gbrlsnchs/telescope-lsp-handlers.nvim",
+    lazy = false,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").load_extension "lsp_handlers"
+    end,
+  },
+  {
     "nvim-telescope/telescope-file-browser.nvim",
     lazy = false,
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
@@ -165,17 +173,6 @@ local plugins = {
     lazy = false,
     config = function()
       require("nvim-ts-autotag").setup()
-    end,
-  },
-  {
-    "ray-x/navigator.lua",
-    lazy = false,
-    dependencies = {
-      { "ray-x/guihua.lua",     run = "cd lua/fzy && make" },
-      { "neovim/nvim-lspconfig" },
-    },
-    config = function()
-      require("navigator").setup()
     end,
   },
 }
