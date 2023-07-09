@@ -167,6 +167,17 @@ local plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "ray-x/navigator.lua",
+    lazy = false,
+    dependencies = {
+      { "ray-x/guihua.lua",     run = "cd lua/fzy && make" },
+      { "neovim/nvim-lspconfig" },
+    },
+    config = function()
+      require("navigator").setup()
+    end,
+  },
 }
 
 return plugins
