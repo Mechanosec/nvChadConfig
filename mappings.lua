@@ -91,6 +91,12 @@ M.dap = {
 
 M.lspconfig = {
   n = {
+    ["<leader>ld"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+      "Line diagnostic",
+    },
     ["<leader>lD"] = {
       "<cmd> Telescope diagnostics <CR>",
       "Diagnostics",

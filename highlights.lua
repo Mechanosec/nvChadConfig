@@ -10,7 +10,8 @@ M.override = {
     italic = true,
   },
   CursorLine = {
-    bg = "grey",
+    -- bg = "grey",
+    bg = "line",
   },
   Visual = {
     reverse = true,
