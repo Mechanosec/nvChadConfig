@@ -107,10 +107,6 @@ local plugins = {
     end,
   },
   {
-    "svrana/neosolarized.nvim",
-    lazy = false,
-  },
-  {
     "kdheepak/lazygit.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -127,7 +123,6 @@ local plugins = {
   },
   {
     "neovim/nvim-lspconfig",
-
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()

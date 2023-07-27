@@ -98,7 +98,7 @@ M.lspconfig = {
       "Line diagnostic",
     },
     ["<leader>lD"] = {
-      "<cmd> Telescope diagnostics <CR>",
+      "<cmd> Telescope diagnostics bufnr=0 <CR>",
       "Diagnostics",
     },
     ["<leader>lf"] = {
