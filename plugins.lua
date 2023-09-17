@@ -9,6 +9,10 @@ local dapPlugins = require "custom.initPlugins.dap"
 local plugins = {
   -- override plugin configs
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
+  },
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },
@@ -18,9 +22,9 @@ local plugins = {
     opts = overrides.treesitter,
   },
 
-  disablePlugins.nvim_tree,
+  -- disablePlugins.nvim_tree,
   telescopePlugins.lsp_handlers,
-  telescopePlugins.file_browser,
+  -- telescopePlugins.file_browser,
 
   lspPlugins.lsp,
 

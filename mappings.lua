@@ -38,10 +38,10 @@ M.general = {
     ["<leader><leader>"] = {
       "<cmd> HopWord <CR>",
     },
-    ["<leader>e"] = {
-      "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
-      "Explorer",
-    },
+    -- ["<leader>e"] = {
+    --   "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
+    --   "Explorer",
+    -- },
     ["<leader>w"] = {
       function()
         vim.lsp.buf.format { async = false }
