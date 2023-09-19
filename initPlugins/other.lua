@@ -44,5 +44,14 @@ M.chatGPT = {
     "nvim-telescope/telescope.nvim",
   },
 }
+M.codeium = {
+  "Exafunction/codeium.vim",
+  event = "BufEnter",
+  config = function()
+    vim.keymap.set("i", "<C-j>", function()
+      return vim.fn["codeium#Accept"]()
+    end, { expr = true })
+  end,
+}
 
 return M

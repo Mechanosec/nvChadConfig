@@ -1,6 +1,5 @@
 local othePlugins = require "custom.initPlugins.other"
 local lspPlugins = require "custom.initPlugins.lsp"
-local disablePlugins = require "custom.initPlugins.disable"
 local telescopePlugins = require "custom.initPlugins.telescope"
 local dapPlugins = require "custom.initPlugins.dap"
 local overridePlugins = require "custom.initPlugins.override"
@@ -11,10 +10,7 @@ local plugins = {
   overridePlugins.nvim_tree,
   overridePlugins.mason,
 
-  -- disablePlugins.nvim_tree,
-
   telescopePlugins.lsp_handlers,
-  -- telescopePlugins.file_browser,
 
   lspPlugins.lsp,
 
@@ -27,7 +23,7 @@ local plugins = {
   othePlugins.hop,
   othePlugins.diffview,
   othePlugins.lazygit,
-  -- othePlugins.chatGPT,
+  othePlugins.codeium,
 }
 
 return plugins
