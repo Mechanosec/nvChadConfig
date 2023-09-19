@@ -6,13 +6,6 @@ M.better_escape = {
     require("better_escape").setup()
   end,
 }
-M.workspaces = {
-  "natecraddock/workspaces.nvim",
-  lazy = false,
-  config = function()
-    require("workspaces").setup()
-  end,
-}
 M.lazygit = {
   "kdheepak/lazygit.nvim",
   dependencies = {
@@ -39,13 +32,17 @@ M.whichkey = {
     require "custom.configs.whichkey"
   end,
 }
-
--- {
---   "windwp/nvim-ts-autotag",
---   lazy = false,
---   config = function()
---     require("nvim-ts-autotag").setup()
---   end,
--- },
+M.chatGPT = {
+  "jackMort/ChatGPT.nvim",
+  event = "VeryLazy",
+  config = function()
+    require("chatgpt").setup()
+  end,
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim",
+  },
+}
 
 return M

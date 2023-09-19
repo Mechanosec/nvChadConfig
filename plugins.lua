@@ -1,28 +1,18 @@
-local overrides = require "custom.configs.overrides"
 local othePlugins = require "custom.initPlugins.other"
 local lspPlugins = require "custom.initPlugins.lsp"
 local disablePlugins = require "custom.initPlugins.disable"
 local telescopePlugins = require "custom.initPlugins.telescope"
 local dapPlugins = require "custom.initPlugins.dap"
+local overridePlugins = require "custom.initPlugins.override"
 
 ---@type NvPluginSpec[]
 local plugins = {
-  -- override plugin configs
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
+  overridePlugins.treesitter,
+  overridePlugins.nvim_tree,
+  overridePlugins.mason,
 
   -- disablePlugins.nvim_tree,
+
   telescopePlugins.lsp_handlers,
   -- telescopePlugins.file_browser,
 
@@ -37,7 +27,7 @@ local plugins = {
   othePlugins.hop,
   othePlugins.diffview,
   othePlugins.lazygit,
-  othePlugins.workspaces,
+  othePlugins.chatGPT,
 }
 
 return plugins
