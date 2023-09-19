@@ -27,7 +27,7 @@ local plugins = {
   othePlugins.hop,
   othePlugins.diffview,
   othePlugins.lazygit,
-  othePlugins.chatGPT,
+  -- othePlugins.chatGPT,
 }
 
 return plugins
