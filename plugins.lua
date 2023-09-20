@@ -15,7 +15,6 @@ local plugins = {
   lspPlugins.lsp,
 
   dapPlugins.dap,
-  dapPlugins.mason_dap,
   dapPlugins.dap_ui,
 
   othePlugins.whichkey,
@@ -23,7 +22,7 @@ local plugins = {
   othePlugins.hop,
   othePlugins.diffview,
   othePlugins.lazygit,
-  othePlugins.codeium,
+  -- othePlugins.codeium,
 }
 
 return plugins

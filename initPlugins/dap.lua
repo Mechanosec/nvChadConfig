@@ -1,7 +1,9 @@
 local M = {}
 M.dap = {
   "mfussenegger/nvim-dap",
-  lazy = false,
+  config = function()
+    require "custom.configs.dap"
+  end,
 }
 M.mason_dap = {
   "jay-babu/mason-nvim-dap.nvim",
@@ -15,7 +17,7 @@ M.mason_dap = {
 }
 M.dap_ui = {
   "rcarriga/nvim-dap-ui",
-  lazy = false,
+  event = "VeryLazy",
   requires = {
     "mfussenegger/nvim-dap",
   },
