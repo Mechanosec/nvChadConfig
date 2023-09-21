@@ -1,5 +1,4 @@
 local dap = require "dap"
-local dapUtils = require "dap.utils"
 
 dap.adapters.node2 = {
   type = "executable",

@@ -2,6 +2,7 @@ local M = {}
 
 M.nvim_tree = {
   "nvim-tree/nvim-tree.lua",
+  enabled = false,
   opts = {
     git = {
       enable = true,

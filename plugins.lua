@@ -3,14 +3,12 @@ local lspPlugins = require "custom.initPlugins.lsp"
 local telescopePlugins = require "custom.initPlugins.telescope"
 local dapPlugins = require "custom.initPlugins.dap"
 local overridePlugins = require "custom.initPlugins.override"
-local disablePlugins = require "custom.initPlugins.disable"
 
 ---@type NvPluginSpec[]
 local plugins = {
-  disablePlugins.nvim_tree,
 
   overridePlugins.treesitter,
-  -- overridePlugins.nvim_tree,
+  overridePlugins.nvim_tree,
   overridePlugins.mason,
 
   telescopePlugins.lsp_handlers,
