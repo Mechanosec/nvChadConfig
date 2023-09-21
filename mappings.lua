@@ -4,6 +4,7 @@ local M = {}
 M.disabled = {
   n = {
     ["<leader>h"] = "",
+
     ["<leader>v"] = "",
     ["<leader>D"] = "",
     ["<leader>n"] = "",
@@ -41,6 +42,7 @@ M.disabled = {
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+
     ["<leader><leader>"] = {
       "<cmd> HopWord <CR>",
     },
@@ -48,13 +50,16 @@ M.general = {
     --   "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
     --   "Explorer",
     -- },
+    ["<leader>e"] = {
+      "<cmd> :Neotree filesystem reveal float <CR>",
+      "Explorer",
+    },
+
     ["<leader>w"] = {
-      function()
-        vim.lsp.buf.format { async = false }
-        vim.cmd "w"
-      end,
+      "<cmd> w <CR>",
       "Save buffer",
     },
+
     ["<leader>q"] = {
       "<cmd> q <CR>",
       "Close",

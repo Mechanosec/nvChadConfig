@@ -44,14 +44,22 @@ M.chatGPT = {
     "nvim-telescope/telescope.nvim",
   },
 }
-M.codeium = {
-  "Exafunction/codeium.vim",
-  event = "BufEnter",
+M.neo_tree = {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+  },
   config = function()
-    vim.keymap.set("i", "<C-j>", function()
-      return vim.fn["codeium#Accept"]()
-    end, { expr = true })
+    vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+    vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+    vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+    vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
+    require("neo-tree").setup { popup_border_style = "rounded" }
   end,
+  lazy = false,
 }
 
 return M
