@@ -58,4 +58,12 @@ M.neo_tree = {
   lazy = false,
 }
 
+M.auto_tag = {
+  "windwp/nvim-ts-autotag",
+  lazy = false,
+  config = function()
+    require("nvim-ts-autotag").setup()
+  end,
+}
+
 return M

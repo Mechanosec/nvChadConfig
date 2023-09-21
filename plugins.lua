@@ -24,6 +24,7 @@ local plugins = {
   othePlugins.hop,
   othePlugins.diffview,
   othePlugins.lazygit,
+  othePlugins.auto_tag,
 }
 
 return plugins
