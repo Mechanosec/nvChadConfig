@@ -38,6 +38,9 @@ M.mason = {
       -- c/cpp stuff
       "clangd",
       "clang-format",
+
+      -- yaml
+      "yamlfmt",
     },
   },
 }
@@ -57,16 +60,11 @@ M.treesitter = {
       "markdown",
       "markdown_inline",
       "prisma",
+      "yaml",
     },
     indent = {
       enable = true,
-      -- disable = {
-      --   "python"
-      -- },
     },
-    -- autotag = {
-    --   enable = true,
-    -- },
   },
 }
 

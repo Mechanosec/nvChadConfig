@@ -15,6 +15,8 @@ local sources = {
   formatting.stylua,
   -- cpp
   formatting.clang_format,
+  -- yaml
+  formatting.yamlfmt,
 
   lint.eslint.with {
     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,

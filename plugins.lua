@@ -25,7 +25,7 @@ local plugins = {
   othePlugins.diffview,
   othePlugins.lazygit,
   othePlugins.auto_tag,
-  othePlugins.tabnine,
+  -- othePlugins.tabnine,
 }
 
 return plugins
