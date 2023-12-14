@@ -8,10 +8,11 @@ local overridePlugins = require "custom.initPlugins.override"
 local plugins = {
 
   overridePlugins.treesitter,
-  overridePlugins.nvim_tree,
+  -- overridePlugins.nvim_tree,
   overridePlugins.mason,
 
   telescopePlugins.lsp_handlers,
+  telescopePlugins.file_browser,
 
   lspPlugins.lsp,
 
