@@ -46,14 +46,14 @@ M.general = {
     ["<leader><leader>"] = {
       "<cmd> HopWord <CR>",
     },
-    -- ["<leader>e"] = {
-    --   "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
-    --   "Explorer",
-    -- },
     ["<leader>e"] = {
-      "<cmd> :Neotree filesystem reveal float <CR>",
+      "<cmd> :Telescope file_browser path=%:p:h select_buffer=true <CR>",
       "Explorer",
     },
+    -- ["<leader>e"] = {
+    --   "<cmd> :Neotree filesystem reveal float <CR>",
+    --   "Explorer",
+    -- },
 
     ["<leader>w"] = {
       "<cmd> w <CR>",
