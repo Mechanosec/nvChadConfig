@@ -18,6 +18,10 @@ local sources = {
   -- yaml
   formatting.yamlfmt,
 
+  -- lint.eslint_d.with {
+  --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  -- },
+
   lint.eslint.with {
     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },
