@@ -41,6 +41,9 @@ M.mason = {
 
       -- yaml
       "yamlfmt",
+
+      -- golang
+      "gopls",
     },
   },
 }
@@ -61,6 +64,11 @@ M.treesitter = {
       "markdown_inline",
       "prisma",
       "yaml",
+
+      -- golang
+      "go",
+      "gosum",
+      "gomod",
     },
     indent = {
       enable = true,
