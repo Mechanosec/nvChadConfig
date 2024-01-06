@@ -33,6 +33,8 @@ M.mason = {
       "typescript-language-server",
       "deno",
       "prettier",
+
+      -- prisma
       "prisma-language-server",
 
       -- c/cpp stuff
@@ -44,6 +46,8 @@ M.mason = {
 
       -- golang
       "gopls",
+      "gofumpt",
+      "goimports-reviser",
     },
   },
 }

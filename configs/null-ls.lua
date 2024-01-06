@@ -18,14 +18,15 @@ local sources = {
   -- yaml
   formatting.yamlfmt,
 
-  -- lint.eslint_d.with {
-  --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
-  -- },
-
+  -- ts/js
   lint.eslint.with {
     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },
   code_actions.eslint,
+
+  -- golang
+  formatting.gofumpt,
+  formatting.goimports_reviser,
 }
 
 null_ls.setup {
