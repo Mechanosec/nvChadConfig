@@ -12,6 +12,7 @@ local plugins = {
   overridePlugins.mason,
 
   telescopePlugins.lsp_handlers,
+  telescopePlugins.ui_select,
   telescopePlugins.file_browser,
 
   lspPlugins.lsp,
@@ -26,7 +27,6 @@ local plugins = {
   othePlugins.diffview,
   othePlugins.lazygit,
   othePlugins.auto_tag,
-  -- othePlugins.tabnine,
 }
 
 return plugins

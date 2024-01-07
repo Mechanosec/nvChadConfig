@@ -82,6 +82,4 @@ M.auto_tag = {
   end,
 }
 
-M.test = {}
-
 return M
