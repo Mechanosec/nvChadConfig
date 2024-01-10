@@ -8,11 +8,9 @@ local overridePlugins = require "custom.initPlugins.override"
 local plugins = {
 
   overridePlugins.treesitter,
-  -- overridePlugins.nvim_tree,
   overridePlugins.mason,
 
   telescopePlugins.lsp_handlers,
-  telescopePlugins.ui_select,
   telescopePlugins.file_browser,
 
   lspPlugins.lsp,
@@ -27,6 +25,7 @@ local plugins = {
   othePlugins.diffview,
   othePlugins.lazygit,
   othePlugins.auto_tag,
+  othePlugins.tabnine,
 }
 
 return plugins
