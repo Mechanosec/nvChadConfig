@@ -3,7 +3,7 @@ local dap = require "dap"
 dap.adapters.node2 = {
   type = "executable",
   command = "node",
-  args = { os.getenv "HOME" .. "/.config/nvim/lua/custom/debuggers/node/out/src/nodeDebug.js" },
+  args = { os.getenv "HOME" .. "/.config/nvim/lua/debuggers/vscode-node-debug/src/node/nodeDebug.js" },
 }
 local js_based_languages = { "typescript", "javascript", "typescriptreact" }
 for _, language in ipairs(js_based_languages) do
